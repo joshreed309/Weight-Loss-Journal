@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const Posts = sequelize.define("Posts", {
+  const Weights = sequelize.define("Weights", {
     weightEntry: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
   });
-  return Posts;
+  return Weights;
 };

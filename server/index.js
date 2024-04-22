@@ -7,6 +7,7 @@ app.use(cors());
 
 const db = require("./models");
 
+// Routers
 const weightRouter = require("./routes/Weight");
 app.use("/weight", weightRouter);
 
