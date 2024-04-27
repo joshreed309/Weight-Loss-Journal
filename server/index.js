@@ -10,6 +10,8 @@ const db = require("./models");
 // Routers
 const weightRouter = require("./routes/Weight");
 app.use("/weight", weightRouter);
+const exerciseRouter = require("./routes/Exercise");
+app.use("/exercises", exerciseRouter);
 
 db.sequelize.sync().then(() => {
   app.listen(3001, () => {
