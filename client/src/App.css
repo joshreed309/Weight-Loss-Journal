@@ -2,13 +2,62 @@
   width: 100vw;
   height: auto;
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   flex-direction: column;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+/* WEIGHTS HOMEPAGE */
+
+.weightCard {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weight {
+  width: 300px;
+  height: 100px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 15px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.weight:hover {
+  box-shadow: rgba(8, 8, 8, 0.2) 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.weight .weightEntry {
+  flex: 60%;
+  border-bottom: 1px solid lightgray;
+  background-color: crimson;
+  display: grid;
+  place-content: center;
+  color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.weight .date {
+  flex: 40%;
+  border-top: 1px solid lightgray;
+  padding-left: 15px;
+  background-color: crimson;
+  display: grid;
+  place-content: center;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* NAVBAR */

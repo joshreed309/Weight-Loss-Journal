@@ -12,21 +12,23 @@ function Home() {
     });
   });
   return (
-    <div>
-      {weightEntries.map((value, key) => {
-        return (
-          <div
-            key={key}
-            className="weight"
-            onClick={() => {
-              navigate(`/weight/${value.id}`);
-            }}
-          >
-            <div className="weightEntry">{value.weightEntry}</div>
-          </div>
-        );
-      })}
-    </div>
+    
+      <div className="weightCard">
+        {weightEntries.map((value, key) => {
+          return (
+            <div
+              key={key}
+              className="weight"
+              onClick={() => {
+                navigate(`/weight/${value.id}`);
+              }}
+            >
+              <div className="weightEntry">{value.weightEntry}kgs</div>
+              <div className="date">{value.createdAt}</div>
+            </div>
+          );
+        })}
+      </div>
   );
 }
 

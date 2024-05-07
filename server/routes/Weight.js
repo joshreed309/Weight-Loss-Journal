@@ -1,9 +1,25 @@
 const express = require("express");
 const router = express.Router();
-const { Weights } = require("../models");
+const { Weights, sequelize } = require("../models");
 
 router.get("/", async (req, res) => {
-  const weightEntries = await Weights.findAll();
+  const weightEntries = await Weights.findAll({
+    attributes: {
+      include: [
+        "id",
+        "weightEntry",
+        [
+          sequelize.fn(
+            "DATE_FORMAT",
+            sequelize.col("createdAt"),
+            "%d/%m/%Y"
+          ),
+          "createdAt",
+        ],
+        "updatedAt",
+      ],
+    },
+  });
   res.json(weightEntries);
 });
 
